@@ -21,6 +21,6 @@ for (let i = 0; i < images.length; i += 1) {
   const itemsListRef = document.querySelector("#gallery");
   itemsListRef.insertAdjacentHTML(
     "afterbegin",
-    `<li><img src="${images[i].url}" alt="${images[i].alt}"></li>`
+    `<li class = 'gallery-item'><img src="${images[i].url}" alt="${images[i].alt}" width="600"></li>`
   );
 }
