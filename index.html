@@ -3,18 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Java Script</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>JS Homework-07</title>
   </head>
   <body>
-    <ul>
-      <li><a href="/task-1.html">task-1</a></li>
-      <li><a href="/task-2.html">task-2</a></li>
-      <li><a href="/task-3.html">task-3</a></li>
-      <li><a href="/task-4.html">task-4</a></li>
-      <li><a href="/task-5.html">task-5</a></li>
-      <li><a href="/task-6.html">task-6</a></li>
-      <li><a href="/task-7.html">task-7</a></li>
-      <li><a href="/task-8.html">task-8</a></li>
+    <!-- Task 1 -->
+
+    <ul id="categories">
+      <li class="item">
+        <h2>Животные</h2>
+
+        <ul>
+          <li>Кот</li>
+          <li>Хомяк</li>
+          <li>Лошадь</li>
+          <li>Попугай</li>
+        </ul>
+      </li>
+      <li class="item">
+        <h2>Продукты</h2>
+
+        <ul>
+          <li>Хлеб</li>
+          <li>Петрушка</li>
+          <li>Творог</li>
+        </ul>
+      </li>
+      <li class="item">
+        <h2>Технологии</h2>
+
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node</li>
+        </ul>
+      </li>
     </ul>
+
+    <!-- Task 2 -->
+    <br />
+    <br />
+    <br />
+    <ul id="ingredients"></ul>
+
+    <!-- Task 3 -->
+    <br />
+    <br />
+    <br />
+
+    <ul id="gallery"></ul>
+
+    <!-- Task 4 -->
+    <br />
+    <br />
+    <br />
+
+    <div id="counter">
+      <button type="button" data-action="decrement">-1</button>
+      <span id="value">0</span>
+      <button type="button" data-action="increment">+1</button>
+    </div>
+
+    <!-- Task 5 -->
+    <br />
+    <br />
+    <br />
+
+    <input type="text" placeholder="Ваше имя?" id="name-input" />
+    <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
+
+    <!-- Task 6 -->
+    <br />
+    <br />
+    <br />
+
+    <input
+      type="text"
+      id="validation-input"
+      data-length="6"
+      placeholder="Введи 6 символов"
+    />
+
+    <!-- Task 7 -->
+    <br />
+    <br />
+    <br />
+
+    <input id="font-size-control" type="range" />
+    <br />
+    <span id="text">Абракадабра!</span>
+
+    <!-- Task 8 -->
+    <br />
+    <br />
+    <br />
+
+    <div id="controls">
+      <input type="number" min="0" max="100" step="1" />
+      <button type="button" data-action="render">Создать</button>
+      <button type="button" data-action="destroy">Очистить</button>
+    </div>
+
+    <div id="boxes"></div>
+
+    <script src="./js/task-8.js" type="module"></script>
+
+    <!-- Script links -->
+
+    <script src="./js/task-1.js" type="module"></script>
+    <script src="./js/task-2.js" type="module"></script>
+    <script src="./js/task-3.js" type="module"></script>
+    <script src="./js/task-4.js" type="module"></script>
+    <script src="./js/task-5.js" type="module"></script>
+    <script src="./js/task-6.js" type="module"></script>
+    <script src="./js/task-7.js" type="module"></script>
+    <script src="./js/task-8.js" type="module"></script>
   </body>
 </html>
