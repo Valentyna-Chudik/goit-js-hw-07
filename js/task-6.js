@@ -5,6 +5,7 @@ function onInputChange(event) {
   console.log(event.currentTarget.value);
 
   const inputDataLength = Number(inputRef.getAttribute(`data-length`));
+  // console.log(typeof inputDataLength);
   const inputValueLength = inputRef.value.length;
 
   if (inputDataLength === inputValueLength) {
