@@ -1,13 +1,14 @@
-const inputRef = document.querySelector("#name-input");
-const outputRef = document.querySelector("#name-output");
+// Во всех функциях обработчиках значение должно браться из обьекта события. У тебя оно в параметре функции указано, но не использовано по назначению
 
-inputRef.addEventListener("input", onInputChange);
+const inputRef = document.querySelector('#name-input');
+const outputRef = document.querySelector('#name-output');
+
+inputRef.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-  console.log(event.currentTarget.value);
-  if (inputRef.value === "") {
-    outputRef.textContent = "незнакомец";
+  if (inputRef.value === '') {
+    outputRef.textContent = 'незнакомец';
   } else {
-    outputRef.textContent = inputRef.value;
+    outputRef.textContent = event.target.value;
   }
 }
