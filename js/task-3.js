@@ -16,7 +16,7 @@ const images = [
   },
 ];
 
-//Все элементы галереи должны добавляться в DOM за одну операцию вставки. У тебя это происходит на каждой итерации цикла
+// -------Не верно--------(вставка происходит на каждой итерации цикла)
 
 // for (let i = 0; i < images.length; i += 1) {
 //   console.log(images[i]);
@@ -27,17 +27,36 @@ const images = [
 //   `<li class = 'gallery-item'><img src="${images[i].url}" alt="${images[i].alt}" width="600"></li>`,
 // );
 
+// -------Не верно--------(вставка происходит на каждой итерации цикла)
+// const galleryRef = document.querySelector('#gallery');
+
+// const createGalleryList = images.map(img => {
+//   const element = document.createElement('li');
+//   element.insertAdjacentHTML(
+//     'afterbegin',
+//     `<li class = 'gallery-item'><img src="${img.url}" alt="${img.alt}" width="600">`,
+//   );
+
+//   return element;
+// });
+
+// const elements = createGalleryList;
+// galleryRef.append(...elements);
+
+// const galleryRef = document.querySelector('#gallery');
+// const galleryList = images.map(img => {
+//   return
+//     `<li class = 'gallery-item'><img src="${img.url}" alt="${img.alt}" width="600">`,
+//   ).join('');
+// });
+// galleryRef.insertAdjacentHTML('afterbegin', galleryList);
+
+// Верно
 const galleryRef = document.querySelector('#gallery');
+const galleryList = images
+  .map(({ url, alt }) => {
+    return `<li class = 'gallery-item'><img src="${url}" alt="${alt}" width="600">`;
+  })
+  .join('');
 
-const createGalleryList = images.map(img => {
-  const element = document.createElement('li');
-  element.insertAdjacentHTML(
-    'afterbegin',
-    `<li class = 'gallery-item'><img src="${img.url}" alt="${img.alt}" width="600">`,
-  );
-
-  return element;
-});
-
-const elements = createGalleryList;
-galleryRef.append(...elements);
+galleryRef.insertAdjacentHTML('afterbegin', galleryList);

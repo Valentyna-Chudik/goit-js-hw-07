@@ -6,7 +6,7 @@ const outputRef = document.querySelector('#name-output');
 inputRef.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-  if (inputRef.value === '') {
+  if (event.target.value === '') {
     outputRef.textContent = 'незнакомец';
   } else {
     outputRef.textContent = event.target.value;
